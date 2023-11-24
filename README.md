@@ -24,11 +24,15 @@ This project implements a Facebook scrapping service using FastAPI to retrieve d
 
 - Create an `app` directory for this step with three files (`db`, `main`, and `scraper`).
 
-    ![Browser Data](readme-images/browser_data.png)
-    *The data in the browser URL [http://172.18.0.1/scrape](http://172.18.0.1/scrape)*
+<div align="center">
+    <img src="readme-images/browser_data.png " >
+    <p>the data in browser url http://172.18.0.1/scrape</p>
+</div>
 
-    ![Database Data](readme-images/db_data.png)
-    *Data in the database*
+<div align="center">
+    <img src="readme-images/db_data.png " >
+    <p>data in database</p>
+</div>
 
 ## Dockerization
 
@@ -38,5 +42,8 @@ This project implements a Facebook scrapping service using FastAPI to retrieve d
 
 - A simple test to assert that the data is exposed correctly on the browser.
 
-    ![Test](readme-images/test.png)
-    *Test the service*
+<div align="center">
+    <img src="readme-images/test.png " >
+    <p>test the service</p>
+</div>
+
