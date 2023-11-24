@@ -8,20 +8,20 @@ from db import *
 class FacebookPageData(Base):
     __tablename__ = 'facebook_page_data'
 
-    id = Column(Integer, primary_key=True, autoincrement=True)
-    page_id = Column(String)
-    page_name = Column(String)
-    about = Column(Text)
+    id           = Column(Integer, primary_key=True, autoincrement=True)
+    page_id      = Column(String)
+    page_name    = Column(String)
+    about        = Column(Text)
     post_content = Column(JSON)
-    timestamp = Column(DateTime, default=datetime.utcnow)
+    timestamp    = Column(DateTime, default=datetime.utcnow)
 
 Base.metadata.create_all(bind=engine)
 
 def save_to_database(session, page_id, page_name, about, post_content):
     entry = FacebookPageData(
-        page_id=page_id,
-        page_name=page_name,
-        about=about,
+        page_id     =page_id,
+        page_name   =page_name,
+        about       =about,
         post_content=post_content
     )
     session.add(entry)
