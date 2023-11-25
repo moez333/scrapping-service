@@ -27,7 +27,7 @@ def save_to_database(session, page_id, page_name, about, post_content):
     session.commit()
 
 def scrape_facebook_page(page_id: str, access_token: str):
-    graph_api_url = f"https://graph.facebook.com/v18.0/{page_id}?fields=id,name,about,posts{{id,message,created_time,reactions,comments}}&access_token={access_token}"
+    graph_api_url = f"https://graph.facebook.com/v18.0/{page_id}?fields=id,name,about,posts{{id,message,created_time,reactions.summary(total_count),comments.summary(total_count)}}&access_token={access_token}"
 
     response = requests.get(graph_api_url)
 
