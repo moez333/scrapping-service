@@ -4,7 +4,7 @@ COPY ./app /app
 
 
 RUN pip install sqlalchemy psycopg2-binary
-RUN pip install beautifulsoup4
+#RUN pip install beautifulsoup4
 RUN pip install requests
 
 
